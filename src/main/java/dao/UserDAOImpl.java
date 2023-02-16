@@ -1,6 +1,5 @@
 package dao;
 
-import model.BD;
 import model.User;
 import util.Util;
 

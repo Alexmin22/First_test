@@ -2,7 +2,6 @@ package org.example;
 
 import dao.UserDAOImpl;
 import model.User;
-import service.UserService;
 import service.UserServiceImpl;
 
 import java.util.Random;
