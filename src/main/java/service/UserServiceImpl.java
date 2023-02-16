@@ -3,8 +3,6 @@ package service;
 import dao.UserDAOImpl;
 import model.User;
 
-import java.util.List;
-
 public class UserServiceImpl implements UserService{
     private final UserDAOImpl userDao;
 

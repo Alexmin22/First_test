@@ -2,6 +2,8 @@ package org.example;
 
 import dao.UserDAOImpl;
 import model.User;
+import service.UserService;
+import service.UserServiceImpl;
 
 import java.util.Random;
 
@@ -31,26 +33,26 @@ public class Main {
                 "User "+r.nextInt(10000), r.nextInt(18, 99) );
 
 
-        UserDAOImpl us = new UserDAOImpl();
+        UserServiceImpl us = new UserServiceImpl(new UserDAOImpl());
 
-//        us.createTable();
-//
-//        us.saveUser(user1);
-//        us.saveUser(user2);
-//        us.saveUser(user3);
-//        us.saveUser(user4);
-//        us.saveUser(user5);
-//        us.saveUser(user6);
+       us.createTable();
+
+        us.saveUser(user1);
+        us.saveUser(user2);
+        us.saveUser(user3);
+        us.saveUser(user4);
+        us.saveUser(user5);
+        us.saveUser(user6);
 //        us.saveUser(user7);
 //        us.saveUser(user8);
 //        us.saveUser(user9);
 //        us.saveUser(user10);
 //
-//        us.getAllUsers();
+        us.getAllUsers();
 //
 //        us.removeUserID(user4);
 //
 //        us.cleanUserTable();
-//        us.dropTable();
+        us.dropTable();
     }
 }
